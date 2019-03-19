@@ -1612,6 +1612,10 @@ a.playlists_category:hover {
   text-align: right;
 }
 
+.video-block .plyr__volume {
+  display: block !important;
+}
+
 .wrapper {
   max-width: 1280px;
   margin-left: auto;

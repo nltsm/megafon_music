@@ -321,7 +321,8 @@ app.addModule('tracks', function () {
 app.addModule('video-player', function () {
 	this.init = function () {
 		videoPlayer = new Plyr('#player', {
-			i18n: playerLang
+			i18n: playerLang,
+			volume: 1,
 		});
 	};
 });
