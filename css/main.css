@@ -1028,6 +1028,7 @@ button {
 
 .playlists_image img {
   width: 100%;
+  display: block;
 }
 
 .playlists_sound,
