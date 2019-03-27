@@ -1571,6 +1571,13 @@ a.playlists_category:hover {
   width: 100%;
 }
 
+.video-block_item.active .video-block_image:after {
+  opacity: 1;
+  background-image: url(../img/pause.svg);
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
 .video-block_data {
   flex-grow: 1;
   width: 1%;
@@ -1614,7 +1621,7 @@ a.playlists_category:hover {
 }
 
 .video-block .plyr__volume {
-  display: block !important;
+  display: flex !important;
 }
 
 .wrapper {

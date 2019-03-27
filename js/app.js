@@ -320,9 +320,29 @@ app.addModule('tracks', function () {
 });
 app.addModule('video-player', function () {
 	this.init = function () {
+		var $video = $('#player');
 		videoPlayer = new Plyr('#player', {
 			i18n: playerLang,
 			volume: 1,
+		});
+		
+		click('.video-block_image', function (e) {
+			e.preventDefault();
+			
+			var parent = $(this).closest('.video-block_item');
+			var src = parent.attr('data-src');
+			$video.attr('src', src);
+			videoPlayer.play();
+			$('.video-block_item').removeClass('active');
+			parent.addClass('active');
+		});
+		
+		videoPlayer.on('ended', function () {
+			var $active = $('.video-block_item.active');
+			var next = $active.next();
+			if (next.length) {
+				next.find('.video-block_image').get(0).click();
+			}
 		});
 	};
 });
