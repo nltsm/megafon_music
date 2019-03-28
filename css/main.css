@@ -1014,7 +1014,8 @@ button {
 
 .playlists_item {
   width: 33.333%;
-  padding: 10px 0;
+  padding: 0 10px;
+  margin-bottom: 15px;
 }
 
 .playlists_items.__multiple .playlists_item {
