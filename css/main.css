@@ -21,35 +21,56 @@
 
 @font-face {
   font-family: 'MegaFonGraphikLC';
-  src: url('../fonts/MegaFonGraphikLC-Light.eot?#iefix') format('embedded-opentype'), url('../fonts/MegaFonGraphikLC-Light.otf') format('opentype'), url('../fonts/MegaFonGraphikLC-Light.woff') format('woff'), url('../fonts/MegaFonGraphikLC-Light.ttf') format('truetype'), url('../fonts/MegaFonGraphikLC-Light.svg#MegaFonGraphikLC-Light') format('svg');
+  src: font-url('MegaFonGraphikLC-Light.eot?#iefix') format('embedded-opentype'), font-url('MegaFonGraphikLC-Light.otf') format('opentype'), font-url('MegaFonGraphikLC-Light.woff') format('woff'), font-url('MegaFonGraphikLC-Light.ttf') format('truetype'), font-url('MegaFonGraphikLC-Light.svg#MegaFonGraphikLC-Light') format('svg');
   font-weight: 300;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'MegaFonGraphikLC';
-  src: url('../fonts/MegaFonGraphikLC-Regular.eot?#iefix') format('embedded-opentype'), url('../fonts/MegaFonGraphikLC-Regular.otf') format('opentype'), url('../fonts/MegaFonGraphikLC-Regular.woff') format('woff'), url('../fonts/MegaFonGraphikLC-Regular.ttf') format('truetype'), url('../fonts/MegaFonGraphikLC-Regular.svg#MegaFonGraphikLC-Regular') format('svg');
+  src: font-url('MegaFonGraphikLC-Regular.eot?#iefix') format('embedded-opentype'), font-url('MegaFonGraphikLC-Regular.otf') format('opentype'), font-url('MegaFonGraphikLC-Regular.woff') format('woff'), font-url('MegaFonGraphikLC-Regular.ttf') format('truetype'), font-url('MegaFonGraphikLC-Regular.svg#MegaFonGraphikLC-Regular') format('svg');
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'MegaFonGraphikLC';
-  src: url('../fonts/MegaFonGraphikLC-Medium.eot?#iefix') format('embedded-opentype'), url('../fonts/MegaFonGraphikLC-Medium.otf') format('opentype'), url('../fonts/MegaFonGraphikLC-Medium.woff') format('woff'), url('../fonts/MegaFonGraphikLC-Medium.ttf') format('truetype'), url('../fonts/MegaFonGraphikLC-Medium.svg#MegaFonGraphikLC-Medium') format('svg');
+  src: font-url('MegaFonGraphikLC-Medium.eot?#iefix') format('embedded-opentype'), font-url('MegaFonGraphikLC-Medium.otf') format('opentype'), font-url('MegaFonGraphikLC-Medium.woff') format('woff'), font-url('MegaFonGraphikLC-Medium.ttf') format('truetype'), font-url('MegaFonGraphikLC-Medium.svg#MegaFonGraphikLC-Medium') format('svg');
   font-weight: 500;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'MegaFonGraphikLC';
-  src: url('../fonts/MegaFonGraphikLC-Semibold.eot?#iefix') format('embedded-opentype'), url('../fonts/MegaFonGraphikLC-Semibold.otf') format('opentype'), url('../fonts/MegaFonGraphikLC-Semibold.woff') format('woff'), url('../fonts/MegaFonGraphikLC-Semibold.ttf') format('truetype'), url('../fonts/MegaFonGraphikLC-Semibold.svg#MegaFonGraphikLC-Medium') format('svg');
+  src: font-url('MegaFonGraphikLC-Light.eot?#iefix') format('embedded-opentype'), font-url('MegaFonGraphikLC-Light.otf') format('opentype'), font-url('MegaFonGraphikLC-Light.woff') format('woff'), font-url('MegaFonGraphikLC-Light.ttf') format('truetype'), font-url('MegaFonGraphikLC-Light.svg#MegaFonGraphikLC-Light') format('svg');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MegaFonGraphikLC';
+  src: font-url('MegaFonGraphikLC-Regular.eot?#iefix') format('embedded-opentype'), font-url('MegaFonGraphikLC-Regular.otf') format('opentype'), font-url('MegaFonGraphikLC-Regular.woff') format('woff'), font-url('MegaFonGraphikLC-Regular.ttf') format('truetype'), font-url('MegaFonGraphikLC-Regular.svg#MegaFonGraphikLC-Regular') format('svg');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MegaFonGraphikLC';
+  src: font-url('MegaFonGraphikLC-Medium.eot?#iefix') format('embedded-opentype'), font-url('MegaFonGraphikLC-Medium.otf') format('opentype'), font-url('MegaFonGraphikLC-Medium.woff') format('woff'), font-url('MegaFonGraphikLC-Medium.ttf') format('truetype'), font-url('MegaFonGraphikLC-Medium.svg#MegaFonGraphikLC-Medium') format('svg');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MegaFonGraphikLC';
+  src: font-url('MegaFonGraphikLC-Semibold.eot?#iefix') format('embedded-opentype'), font-url('MegaFonGraphikLC-Semibold.otf') format('opentype'), font-url('MegaFonGraphikLC-Semibold.woff') format('woff'), font-url('MegaFonGraphikLC-Semibold.ttf') format('truetype'), font-url('MegaFonGraphikLC-Semibold.svg#MegaFonGraphikLC-Medium') format('svg');
   font-weight: 600;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'TruthCYRRegular';
-  src: url('../fonts/TruthCYR-Regular.eot?#iefix') format('embedded-opentype'), url('../fonts/TruthCYR-Regular.otf') format('opentype'), url('../fonts/TruthCYR-Regular.woff') format('woff'), url('../fonts/TruthCYR-Regular.ttf') format('truetype'), url('../fonts/TruthCYR-Regular.svg#TruthCYR-Regular') format('svg');
+  src: font-url('TruthCYR-Regular.eot?#iefix') format('embedded-opentype'), font-url('TruthCYR-Regular.otf') format('opentype'), font-url('TruthCYR-Regular.woff') format('woff'), font-url('TruthCYR-Regular.ttf') format('truetype'), font-url('TruthCYR-Regular.svg#TruthCYR-Regular') format('svg');
   font-weight: normal;
   font-style: normal;
 }
