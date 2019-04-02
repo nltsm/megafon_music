@@ -96,13 +96,13 @@ app.addModule('player', function () {
 			
 			var $repeat = $('.player_repeat');
 			
-			if (self.isRandom()) {
-				self.changeRandom();
-			} else {
-				if ($repeat.hasClass('__repeat_once')) {
+			if ($repeat.hasClass('__repeat_once')) {
 				self.play();
 			} else if ($repeat.hasClass('__repeat')) {
-				var next = tracksModule.getNext();
+				if (self.isRandom()) {
+					self.changeRandom();
+				} else {
+					var next = tracksModule.getNext();
 					
 					if (!next) {
 						next = tracks[0];
