@@ -96,16 +96,20 @@ app.addModule('player', function () {
 			
 			var $repeat = $('.player_repeat');
 			
-			if ($repeat.hasClass('__repeat_once')) {
+			if (self.isRandom()) {
+				self.changeRandom();
+			} else {
+				if ($repeat.hasClass('__repeat_once')) {
 				self.play();
 			} else if ($repeat.hasClass('__repeat')) {
 				var next = tracksModule.getNext();
-				
-				if (!next) {
-					next = tracks[0];
+					
+					if (!next) {
+						next = tracks[0];
+					}
+					self.changeTrack(next);
+					tracksModule.changeTrack($(next.el));
 				}
-				self.changeTrack(next);
-				tracksModule.changeTrack($(next.el));
 			}
 		});
 	};
