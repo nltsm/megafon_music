@@ -12,6 +12,7 @@ app.addModule('album', function () {
 app.addModule('autocomplete', function () {
 	this.init = function () {
 		$("#search").autocomplete({
+			minLength: 3,
 			source: function (request, response) {
 				$.ajax({
 					method: 'get',
