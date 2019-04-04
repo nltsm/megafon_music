@@ -11,24 +11,26 @@ app.addModule('album', function () {
 });
 app.addModule('autocomplete', function () {
 	this.init = function () {
-		var countries = [
-			{value: 'Россия', data: 'AD', link: 'http', anyData: 'value'},
-			{value: 'Испания', data: 'ZZ'},
-			{value: 'Греция', data: 'ZZ'},
-			{value: 'Италия', data: 'ZZ'},
-		];
-		$('#search').autocomplete({
-			lookup: countries,
-			// serviceUrl: '/autocomplete/countries', // вместо lookup для ajax запроса, ну и переменную countries удалить
-			
-			onSelect: function (suggestion) {
-				console.log(suggestion.value);
-				console.log(suggestion.link);
-				console.log(suggestion.anyData);
-				
-				// открыть нужную страницу
+		$("#search").autocomplete({
+			source: function (request, response) {
+				$.ajax({
+					method: 'get',
+					dataType: "json",
+					url: 'search.json',
+					data: {
+						term: request.term
+					},
+					success: function (data) {
+						response( data );
+					}
+				})
+			},
+			select: function (event, ui) {
+				console.log(ui.item.url);
 			}
 		});
+		
+		
 	};
 });
 app.addModule('header', function () {
