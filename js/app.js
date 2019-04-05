@@ -186,29 +186,31 @@ app.addModule('player', function () {
 });
 app.addModule('playlists', function () {
 	this.init = function () {
-		click('.playlists_image', function (e) {
-			if ($(e.target).hasClass('playlists_sound')) {
-				e.preventDefault();
-				var $this = $(this);
+		click('.playlists_sound', function (e) {
+			e.preventDefault();
+			
+			var $this = $(this);
 				
-				if ($(this).attr('data-playing') === 'true') {
-					$('.load-playlist .track:first .track_image').get(0).click();
-				} else {
-					$.ajax({
-						method: 'get',
-						url: 'track.html',
-						success: function (data) {
-							afterLoadData(data);
-						}
-					});
-				}
-				function afterLoadData(data) {
-					$('.playlists_image').removeAttr('data-playing').removeClass('active');
-					$('.tracks').html(data);
-					$('.load-playlist .track:first .track_image').get(0).click();
-					$this.addClass('active');
-					$this.attr('data-playing', 'true');
-				}
+			if ($(this).closest('.playlists_image').attr('data-playing') === 'true') {
+				$('.load-playlist .track:first .track_image').get(0).click();
+			} else {
+				$.ajax({
+					method: 'get',
+					url: $this.attr("href"),
+					success: function (data) {
+						afterLoadData(data);
+					}
+				});
+			}
+
+			function afterLoadData(data) {
+				$('.playlists_image').removeAttr('data-playing').removeClass('active');
+				$('.tracks').html(data);
+				var first = $('.load-playlist .track:first .track_image');
+				first.closest('.tracks').removeAttr('data-activated');
+				first.get(0).click();
+				$this.closest('.playlists_image').addClass('active');
+				$this.closest('.playlists_image').attr('data-playing', 'true');
 			}
 		});
 	};
