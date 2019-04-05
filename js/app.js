@@ -36,7 +36,7 @@ app.addModule('autocomplete', function () {
 });
 app.addModule('header', function () {
 	this.init = function () {
-		click('.header_btn', function () {
+		$('.header_btn').click(function () {
 			$('.header_list').toggleClass('active');
 		});
 	};
