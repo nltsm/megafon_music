@@ -182,7 +182,12 @@ app.addModule('player', function () {
 		var elem = tracks[randomInteger(0, tracks.length - 1)];
 		self.changeTrack(elem);
 		tracksModule.changeTrack($(elem.el));
-	}
+	};
+	this.initLoadList = function () {
+		var first = $('.load-playlist .track:first .track_image');
+		first.get(0).click();
+		first.get(0).click();
+	};
 });
 app.addModule('playlists', function () {
 	this.init = function () {
@@ -297,7 +302,7 @@ app.addModule('tracks', function () {
 			tracks.push({
 				id: $(this).attr('data-id'),
 				image: $(this).find('img').attr('src'),
-				name: $(this).find('.track_name').text(),
+				name: $(this).find('.track_artist').text() + ' - ' + $(this).find('.track_name').text(),
 				info: $(this).find('.track_info').html(),
 				track: $(this).attr('data-track'),
 				playing: false,
