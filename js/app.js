@@ -39,6 +39,16 @@ app.addModule('header', function () {
 		$('.header_btn').click(function () {
 			$('.header_list').toggleClass('active');
 		});
+		
+		$(document).click(function (e) {
+			if (!$(e.target).closest('.header').length) {
+				$('.header_list').removeClass('active');
+			}
+		});
+		
+		$('.header_list a').click(function () {
+			$('.header_list').removeClass('active');
+		})
 	};
 });
 app.addModule('mobile-load', function () {
