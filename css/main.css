@@ -1649,7 +1649,7 @@ a.playlists_category:hover {
 
 .video-block_item.active .video-block_image:after {
   opacity: 1;
-  background-image: url(../img/pause.svg);
+  background-image: url('../img/pause.svg');
   background-position: center center;
   background-repeat: no-repeat;
 }
