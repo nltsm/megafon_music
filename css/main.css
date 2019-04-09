@@ -1825,7 +1825,23 @@ a.playlists_category:hover {
   }
 
   .player_content {
+    position: absolute;
+    left: 0;
+    right: 0;
+    background: #ffffff;
+    width: 100%;
+    padding: 10px;
+    top: -63px;
     display: none;
+  }
+
+  .player.active .player_content {
+    display: flex;
+  }
+
+  .player_name {
+    font-size: 16px;
+    line-height: 18px;
   }
 
   .player_volume {

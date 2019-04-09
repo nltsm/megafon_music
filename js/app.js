@@ -158,12 +158,11 @@ app.addModule('player', function () {
 			return;
 		}
 		
-		console.log(tracks);
-		
 		audioPlayer.play();
 		
 		$('.player_play').addClass('__hidden');
 		$('.player_pause').addClass('__visible');
+		$('.player').addClass('active');
 		
 		tracksModule.htmlToPlayTrack();
 		playListModule.htmlToPlayTrack();
@@ -173,6 +172,7 @@ app.addModule('player', function () {
 			
 		$('.player_pause').removeClass('__visible');
 		$('.player_play').removeClass('__hidden');
+		$('.player').removeClass('active');
 		
 		tracksModule.htmlToPauseTrack();
 		playListModule.htmlToPauseTrack();
