@@ -200,7 +200,6 @@ app.addModule('player', function () {
 	this.initLoadList = function () {
 		var first = $('.load-playlist .track:first .track_image');
 		first.get(0).click();
-		first.get(0).click();
 	};
 });
 app.addModule('playlists', function () {
