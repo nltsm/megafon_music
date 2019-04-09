@@ -1609,7 +1609,7 @@ a.playlists_category:hover {
 }
 
 .video-block_image {
-  width: 40px;
+  width: 70px;
   flex-shrink: 0;
   margin-right: 15px;
   position: relative;
