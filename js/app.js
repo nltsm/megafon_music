@@ -205,6 +205,8 @@ app.addModule('player', function () {
 });
 app.addModule('playlists', function () {
 	this.init = function () {
+		var loadData = false;
+		
 		click('.playlists_sound', function (e) {
 			e.preventDefault();
 			
@@ -215,14 +217,28 @@ app.addModule('playlists', function () {
 			} else {
 				$.ajax({
 					method: 'get',
+					dataType: 'html',
 					url: $this.attr("href"),
 					success: function (data) {
-						afterLoadData(data);
+						loadData = data;
+						//afterLoadData(data);
+						//$this.closest('.playlists_image').attr('data-playing', 'true')
+						//$('.load-playlist .track:first .track_image').get(0).click();
 					}
 				});
+				
+				afterLoadData(loadData);
 			}
 
 			function afterLoadData(data) {
+				if (!data) {
+					setTimeout(function () {
+						afterLoadData(loadData);
+					}, 300);
+					
+					return;
+				}
+				
 				$('.playlists_image').removeAttr('data-playing').removeClass('active');
 				$('.tracks').html(data);
 				var first = $('.load-playlist .track:first .track_image');
@@ -230,12 +246,6 @@ app.addModule('playlists', function () {
 				first.get(0).click();
 				$this.closest('.playlists_image').addClass('active');
 				$this.closest('.playlists_image').attr('data-playing', 'true');
-				
-				var iOS = !!navigator.platform && /iPad|iPhone|iPod/.test(navigator.platform);
-				
-				if (iOS) {
-					first.get(0).click();
-				}
 			}
 		});
 	};

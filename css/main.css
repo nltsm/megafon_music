@@ -711,10 +711,6 @@ button {
   margin-bottom: 0;
 }
 
-.load-playlist {
-  display: none;
-}
-
 .player {
   position: fixed;
   bottom: 0;
