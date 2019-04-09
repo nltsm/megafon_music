@@ -1104,7 +1104,7 @@ button {
   left: 50%;
   background: #229fff;
   border-radius: 50%;
-  background-image: url(../img/play.svg);
+  background-image: url('../img/play.svg');
   background-position: center center;
   background-repeat: no-repeat;
   width: 60px;
@@ -1122,7 +1122,7 @@ button {
 
 .playlists_image.active .playlists_sound {
   opacity: 1;
-  background-image: url(../img/pause.svg);
+  background-image: url('../img/pause.svg');
 }
 
 .playlists.__style .playlists_image {
