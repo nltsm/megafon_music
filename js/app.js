@@ -3,9 +3,7 @@ app.addModule('album', function () {
 		var tracksModule = app.getModule('tracks');
 		
 		click('.album_button', function () {
-			if (!tracksModule.isInited) {
-				$('.track:first .track_image').get(0).click();
-			}
+			$('.album .track:first .track_image').get(0).click();
 		});
 	};
 });
@@ -376,7 +374,9 @@ app.addModule('tracks', function () {
 		return $track.attr('data-playing') === 'stop';
 	};
 	this.playPlayListIfPossible = function () {
-		$('.album .track:first .track_image').get(0).click();
+		try {
+			$('.load-playlist .track:first .track_image').get(0).click();
+		} catch(e) {}
 	}
 });
 app.addModule('video-player', function () {
