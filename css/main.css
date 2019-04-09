@@ -1951,6 +1951,10 @@ a.playlists_category:hover {
   .video-block_col.__2 {
     width: 50%;
   }
+
+  .video-block_image {
+    transition: none;
+  }
 }
 
 @media screen and (max-width: 900px) {
