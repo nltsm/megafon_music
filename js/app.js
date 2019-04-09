@@ -243,6 +243,8 @@ app.addModule('playlists', function () {
 				first.get(0).click();
 				$this.closest('.playlists_image').addClass('active');
 				$this.closest('.playlists_image').attr('data-playing', 'true');
+				
+				loadData = false;
 			}
 		});
 	};
