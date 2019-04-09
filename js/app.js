@@ -225,6 +225,9 @@ app.addModule('playlists', function () {
 				$('.playlists_image').removeAttr('data-playing').removeClass('active');
 				$('.tracks').html(data);
 				var first = $('.load-playlist .track:first .track_image');
+				
+				$('body').html(first)
+				
 				first.closest('.tracks').removeAttr('data-activated');
 				first.get(0).click();
 				$this.closest('.playlists_image').addClass('active');
