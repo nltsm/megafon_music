@@ -75,7 +75,7 @@ app.addModule('player', function () {
 		playListModule = app.getModule('playlists');
 		
 		audioPlayer = new Plyr('#audioPlayer', {
-			i18n: playerLang
+			i18n: playerLang,
 		});
 		
 		click('.player_play', function () {
@@ -200,6 +200,7 @@ app.addModule('player', function () {
 	this.initLoadList = function () {
 		var first = $('.load-playlist .track:first .track_image');
 		first.get(0).click();
+		first.get(0).click();
 	};
 });
 app.addModule('playlists', function () {
@@ -225,13 +226,16 @@ app.addModule('playlists', function () {
 				$('.playlists_image').removeAttr('data-playing').removeClass('active');
 				$('.tracks').html(data);
 				var first = $('.load-playlist .track:first .track_image');
-				
-				$('body').html(first)
-				
 				first.closest('.tracks').removeAttr('data-activated');
 				first.get(0).click();
 				$this.closest('.playlists_image').addClass('active');
 				$this.closest('.playlists_image').attr('data-playing', 'true');
+				
+				var iOS = !!navigator.platform && /iPad|iPhone|iPod/.test(navigator.platform);
+				
+				if (iOS) {
+					first.get(0).click();
+				}
 			}
 		});
 	};
