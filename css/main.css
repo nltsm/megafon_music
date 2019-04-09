@@ -411,6 +411,7 @@ button {
 .album_image img {
   margin: 0 auto;
   display: block;
+  border: 1px solid #000000;
 }
 
 .album_image.__artist img {
@@ -1080,7 +1081,7 @@ button {
 .playlists_image {
   margin-bottom: 10px;
   display: block;
-  transition: 0.5s;
+  transition: all 0.25s linear 0s;
   position: relative;
 }
 
@@ -1406,6 +1407,8 @@ a.playlists_category:hover {
 
 .track_image img {
   width: 100%;
+  display: block;
+  border: 1px solid #000000;
 }
 
 .track.active .track_image-content:after {
