@@ -221,9 +221,6 @@ app.addModule('playlists', function () {
 					url: $this.attr("href"),
 					success: function (data) {
 						loadData = data;
-						//afterLoadData(data);
-						//$this.closest('.playlists_image').attr('data-playing', 'true')
-						//$('.load-playlist .track:first .track_image').get(0).click();
 					}
 				});
 				
