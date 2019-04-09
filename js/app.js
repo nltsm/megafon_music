@@ -158,6 +158,8 @@ app.addModule('player', function () {
 			return;
 		}
 		
+		console.log(tracks);
+		
 		audioPlayer.play();
 		
 		$('.player_play').addClass('__hidden');
@@ -390,7 +392,9 @@ app.addModule('video-player', function () {
 			
 			var parent = $(this).closest('.video-block_item');
 			var src = parent.attr('data-src');
+			var poster = parent.attr('data-poster');
 			$video.attr('src', src);
+			$video.attr('poster', poster);
 			videoPlayer.play();
 			$('.video-block_item').removeClass('active');
 			parent.addClass('active');
