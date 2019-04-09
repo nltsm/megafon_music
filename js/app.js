@@ -79,6 +79,10 @@ app.addModule('player', function () {
 		});
 		
 		click('.player_play', function () {
+			if (tracks.length === 0) {
+				tracksModule.playPlayListIfPossible();
+			}
+			
 			self.play();
 		});
 		
@@ -363,6 +367,9 @@ app.addModule('tracks', function () {
 	this.isPause = function ($track) {
 		return $track.attr('data-playing') === 'stop';
 	};
+	this.playPlayListIfPossible = function () {
+		$('.album .track:first .track_image').get(0).click();
+	}
 });
 app.addModule('video-player', function () {
 	this.init = function () {

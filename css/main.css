@@ -954,6 +954,7 @@ button {
 .player_volume .plyr__controls .plyr__time {
   margin-left: 0;
   font-size: 18px;
+  width: 60px;
 }
 
 .player_volume .plyr__volume {
@@ -1077,8 +1078,6 @@ button {
 }
 
 .playlists_image {
-  border: 1px solid #000000;
-  border-radius: 1px;
   margin-bottom: 10px;
   display: block;
   transition: 0.5s;
@@ -1092,6 +1091,7 @@ button {
 .playlists_image img {
   width: 100%;
   display: block;
+  border: 1px solid #000000;
 }
 
 .playlists_sound,
@@ -1466,13 +1466,20 @@ a.playlists_category:hover {
 }
 
 .track_like {
-  background-image: url("../img/like.png");
+  background-image: url("../img/like.svg");
   background-position: top left;
   background-repeat: no-repeat;
+  background-size: contain;
   width: 24px;
   height: 22px;
   margin-left: 16px;
   flex-shrink: 0;
+}
+
+.track_like.active {
+  background-image: url("../img/like-active.svg");
+  background-position: top left;
+  background-repeat: no-repeat;
 }
 
 .track_share {
@@ -1895,6 +1902,10 @@ a.playlists_category:hover {
     display: none;
   }
 
+  .track_data {
+    padding-right: 0;
+  }
+
   .track_duration {
     font-size: 15px;
     display: none;
@@ -1903,14 +1914,6 @@ a.playlists_category:hover {
 
   .track_duration.__mobile-only {
     display: block;
-  }
-
-  .track_like {
-    display: none;
-  }
-
-  .track_share {
-    display: none;
   }
 
   .user-playlist_items {
