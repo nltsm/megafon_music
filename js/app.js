@@ -260,6 +260,39 @@ app.addModule('playlists', function () {
 		$track.addClass('active');
 	};
 });
+app.addModule('popup', function () {
+	this.init = function () {
+		$('.popup').magnificPopup({
+			preloader: false,
+			showCloseBtn: false,
+			removalDelay: 300,
+			mainClass: 'mfp-fade'
+		});
+		
+		$('.popup-image').magnificPopup({
+			preloader: false,
+			showCloseBtn: false,
+			removalDelay: 300,
+			mainClass: 'mfp-fade',
+			type: 'image'
+		});
+		
+		$('.popup-youtube, .popup-vimeo, .popup-gmaps').magnificPopup({
+			disableOn: 700,
+			type: 'iframe',
+			mainClass: 'mfp-fade',
+			removalDelay: 160,
+			preloader: false,
+
+			fixedContentPos: false
+		});
+		
+		$('.popup-close').click(function (e) {
+			e.preventDefault();
+			$.magnificPopup.close();
+		});
+	};
+});
 app.addModule('top-header', function () {
 	this.init = function () {
 		$('.top-header_user-txt').click(function () {
@@ -387,6 +420,32 @@ app.addModule('tracks', function () {
 			$('.load-playlist .track:first .track_image').get(0).click();
 		} catch(e) {}
 	}
+});
+app.addModule('user-playlist', function () {
+	this.init = function () {
+		$(document).on('keydown paste', '.user-playlist_head-new', function (event) {
+			var len = Number($(this).attr('data-max-length'));
+
+			if ($(this).text().length > len && event.keyCode != 8) {
+				event.preventDefault();
+			}
+		});
+		
+		$(document).on('click', '.user-playlist_icon', function () {
+			var item = $(this).closest('.user-playlist_item');
+			
+			item.find('.user-playlist_head').hide();
+			item.find('.user-playlist_edit').show().get(0).focus();
+		});
+		
+		
+		$(document).on('blur', '.user-playlist_edit', function () {
+			var item = $(this).closest('.user-playlist_item');
+			
+			item.find('.user-playlist_head').show();
+			item.find('.user-playlist_edit').hide();
+		})
+	};
 });
 app.addModule('video-player', function () {
 	this.init = function () {
