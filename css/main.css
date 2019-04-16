@@ -1992,12 +1992,13 @@ a.playlists_category:hover {
 
 .user-playlist_item {
   padding: 0 10px;
-  width: 25%;
+  width: 20%;
   margin-bottom: 30px;
+  position: relative;
 }
 
 .user-playlist_image {
-  height: 300px;
+  height: 230px;
   background: #731982;
   border-radius: 20px;
   background-image: url("../img/music.png");
@@ -2015,7 +2016,7 @@ a.playlists_category:hover {
 }
 
 .user-playlist_head {
-  font-size: 20px;
+  font-size: 18px;
   color: #000000;
   font-weight: 500;
   text-decoration: none;
@@ -2054,7 +2055,7 @@ a.user-playlist_head:hover {
 }
 
 .user-playlist_edit {
-  font-size: 20px;
+  font-size: 18px;
   color: #000000;
   font-weight: 500;
   margin-bottom: 6px;
@@ -2081,6 +2082,18 @@ a.user-playlist_head:hover {
   width: 100%;
   padding: 5px;
   margin-bottom: 5px;
+}
+
+.user-playlist_del {
+  background-image: url("../img/close.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 0;
+  right: 10px;
+  cursor: pointer;
 }
 
 .video-block {
@@ -2473,7 +2486,7 @@ a.user-playlist_head:hover {
   }
 
   .user-playlist_item {
-    width: 320px;
+    width: 33.33%;
   }
 
   .video-block_col.__1 {
@@ -2958,6 +2971,27 @@ a.user-playlist_head:hover {
   }
 
   .user-playlist_item {
-    width: 300px;
+    width: 50%;
+  }
+
+  .user-playlist_image {
+    height: 130px;
+    background-size: 50px auto;
+  }
+
+  .user-playlist_item.__new .user-playlist_image {
+    background-size: 50px auto;
+  }
+
+  .user-playlist_head {
+    font-size: 14px;
+  }
+
+  .user-playlist_edit {
+    font-size: 15px;
+  }
+
+  .user-playlist_info {
+    font-size: 11px;
   }
 }
